@@ -16,14 +16,14 @@ let i =0;
 let db = mysql.createConnection(db_config);
  
 //Connect to database
-/* db.connect(err => {
+db.connect(err => {
     if (err) { 
       console.log('Error connecting to database.')
       return;
     }else{
       console.log("Datebase connected as id: " + db.threadId);    
     }
-}); */
+});
 
 db.on('error', function (err) {
   handleDisconnect();
