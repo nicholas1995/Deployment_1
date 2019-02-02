@@ -12,7 +12,7 @@ app.use(bodyParser.json({limit: '50mb'}));//this fixed the bug with the email si
 app.use(cors()); //DO RESEACH ON THIS.... 29:42 on first video
 require('./passport');
 
-//const db = require('./db'); 
+const db = require('./db');
 module.exports = app;
 require('./routes')(app);
 
