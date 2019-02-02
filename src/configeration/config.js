@@ -1,6 +1,6 @@
 //Holds all the confgeration data for the server
 module.exports = {
-    port: '3000',
+    port: process.env.PORT || 3000,
     db:{    
         host     : 'localhost',
         user     : 'root',

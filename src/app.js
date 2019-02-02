@@ -27,8 +27,7 @@ app.use(serveStatic(path.join(__dirname, "../client", "dist")));
 /* app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname,"", "../client", "dist", "index.html"));
 }); */
-//--------------------------------------------
-
+//-------------------------------------------
 
 //Start Express Server 
 app.listen(config.port, () =>{
