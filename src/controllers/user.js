@@ -226,6 +226,7 @@ module.exports = {
   //Login New
   login_new: async function(req, res){
     try{
+      console.log(req.body)
       let data = JSON.parse(req.body.data); 
       let result = await user_db.get_profile(data.email)
         .catch(err => {

@@ -7,15 +7,16 @@ const app = express();
 
 require("./services/MQTT");
 
+//app.use(morgan('combined'));
+app.use(bodyParser.json({limit: '50mb'}));//this fixed the bug with the email size
+app.use(cors()); //DO RESEACH ON THIS.... 29:42 on first video
+require('./passport');
+
 const db = require('./db');
 module.exports = app;
 require('./routes')(app);
 
 
-//app.use(morgan('combined'));
-app.use(bodyParser.json({limit: '50mb'}));//this fixed the bug with the email size
-app.use(cors()); //DO RESEACH ON THIS.... 29:42 on first video
-require('./passport');
 
 //------------NEW FOR DEPLOYMENT-------------
 var serveStatic = require('serve-static');
