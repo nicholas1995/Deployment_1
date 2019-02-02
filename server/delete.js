@@ -18,7 +18,7 @@ while (i < 100) {
   coordinates.push(vessel_route.slice(pos_1, pos_2));
   pos_1 = pos_2 + 1;
   i = i + 1;
-}
+} //delete
 async function update_location(){
   let lat;
   let lng;
