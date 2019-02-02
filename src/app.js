@@ -18,16 +18,18 @@ app.use(cors()); //DO RESEACH ON THIS.... 29:42 on first video
 require('./passport');
 
 //------------NEW FOR DEPLOYMENT-------------
+var serveStatic = require('serve-static');
 const path = require("path")
-app.use(express.static(path.join(__dirname, "client", "build")))
 
-app.get("*", (req, res) => {
+app.use(serveStatic(path.join(__dirname, "../client", "dist")));
+
+/* app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname,"", "../client", "dist", "index.html"));
-});
+}); */
 //--------------------------------------------
 
 
-//Start Express Server
+//Start Express Server 
 app.listen(config.port, () =>{
     console.log('Server started on port: '+ config.port)
 });  
