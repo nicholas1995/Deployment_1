@@ -7,7 +7,6 @@ Promise.promisifyAll(require("mysql/lib/Pool").prototype);
 
 let db_config = {
   host: config.db.host,
-
   user: config.db.user,
   password: config.db.password,
   database: config.db.database
