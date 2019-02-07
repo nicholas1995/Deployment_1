@@ -7,6 +7,7 @@ Promise.promisifyAll(require("mysql/lib/Pool").prototype);
 
 let db_config = {
   host: config.db.host,
+
   user: config.db.user,
   password: config.db.password,
   database: config.db.database
@@ -19,7 +20,7 @@ let db = mysql.createConnection(db_config);
 db.connect(err => {
     if (err) { 
       console.log('Error connecting to database.')
-      //console.log(err)
+      console.log(err)
       return;
     }else{
       console.log("Datebase connected as id: " + db.threadId);    
