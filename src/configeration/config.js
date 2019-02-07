@@ -2,7 +2,7 @@
 module.exports = {
     port: process.env.PORT || 3000,
     db:{    
-        host     : 'localhost',
+        host     : 'https://dab3e029.ngrok.io',
         user     : 'root',
         password : '',
         database: 'lora_console'
