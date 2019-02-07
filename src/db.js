@@ -19,6 +19,7 @@ let db = mysql.createConnection(db_config);
 db.connect(err => {
     if (err) { 
       console.log('Error connecting to database.')
+      //console.log(err)
       return;
     }else{
       console.log("Datebase connected as id: " + db.threadId);    
